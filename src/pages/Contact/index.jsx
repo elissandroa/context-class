@@ -1,11 +1,11 @@
-import React, { useContext } from "react";
 import "./styles.css";
 import ChangeCounter from "../../components/ChangeCounter";
-import { CounterContext } from "../../context/CounterContext";
+import { useCounterContext } from "../../hooks/useCounterContext";
+
 
 function Contact() {
-  const { counter } = useContext(CounterContext);
-  
+
+  const { counter } = useCounterContext();
   return (
     <div>
       <h1>Contact</h1>
